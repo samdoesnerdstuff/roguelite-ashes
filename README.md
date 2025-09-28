@@ -11,6 +11,9 @@ Built in Lua, this is a "source-available" repository for an in-development game
 
 I am committed to transparent development, which is why the source code is freely available to the community for learning and non-commercial use. The distinction in licensing ensures that while I can still benefit from contributions and feedback on the code, I can also protect the copyrighted art and music assets to fund ongoing development and make a sustainable commercial product.
 
+> [!NOTE]
+> Contributions of code to this project will get your GitHub username (or another name if you prefer) put in the in-game credits sequence. By submitting a contribution, you agree that your code will be licensed under the same terms as this repository and will be included in the commercial product.
+
 ---
 
 Now that the boring but mandatory legal preface is out of the way... welcome to the canonical respository for *Within Ashes!* This is all the source code for the project, this isn't a mirror, this is **the actual source code.** Changes here mean changes to the Steam release. This is a "source-available" repository, the short explaination is that the games assets are under a more restrictive license than the source code. Under the conditions of the source code license you are more than free to clone this repo and play around with it and your own art, however to get the assets used by this game in release, you will need a valid copy from Steam.
