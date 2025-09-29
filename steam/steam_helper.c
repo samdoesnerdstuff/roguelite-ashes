@@ -9,18 +9,20 @@
 // (c) 2025 samdoesnerdstuff
 //
 
-#if defined(_WIN32) || define(_WIN64)
+#if defined(_WIN32) || defined(_WIN64)
     #define SL_API __declspec(dllexport)
 #elif defined(__GNUC__)
-    #define SL_API __atttribute__((visibility("default")))
+    #define SL_API __attribute__((visibility("default")))
 #else
     #error "Unknown OS!"
 #endif
 
 #include <steam/steam_api.h>
-#include <string>
+#include <stdbool.h>
 
+#ifdef __cplusplus
 extern "C" {
+#endif
 
 SL_API bool steam_init() {
     return SteamAPI_Init();
@@ -39,4 +41,15 @@ SL_API const char *steam_get_persona() {
     }
 }
 
+SL_API bool steam_get_achievement(const char *name) {
+    bool achieved = false;
+    
+    if (SteamUserStats())
+        SteamUserStats()->GetAchievement(name, &achieved);
+
+    return achieved;
 }
+
+#ifdef __cplusplus
+}
+#endif
