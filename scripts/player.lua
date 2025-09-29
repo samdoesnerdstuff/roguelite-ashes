@@ -13,7 +13,7 @@ local player = {
     stamina = 1.0,
     stamina_loss_rate = 0.01,
     stamina_regen_rate = 0.009,
-    speed = 100,
+    speed = 133,
 
     -- flags
     has_done_sanity_retaining_activity = false,
@@ -30,7 +30,7 @@ function player:move(dt)
     local original_spd = self.speed
 
     if love.keyboard.isDown("lshift") then
-        speed_mul = 1.33
+        speed_mul = 1.50
         self.stamina = math.max(0, self.stamina - self.stamina_loss_rate)
     else
         speed_mul = 1.00
@@ -60,7 +60,8 @@ function player:draw()
 end
 
 function player:status()
-    print(string.format("HP: %d/%d | Stamina: %.3f | pos: X:%d Y:%d", self.hp_current, self.hp_max, self.stamina, self.x, self.y))
+    print(string.format("HP: %d/%d | Stamina: %.3f | pos: X:%d Y:%d", 
+            self.hp_current, self.hp_max, self.stamina, self.x, self.y))
 end
 
 function player:advance_day()
