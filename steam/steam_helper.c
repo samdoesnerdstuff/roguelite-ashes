@@ -2,7 +2,7 @@
 // steam/steam_helper.cpp
 //
 // Rather than blindly API into Steamworks in Lua and watching it all burn...
-// This takes all the common/used SteamAPI_ functions and makes them friendly
+// This takes all the common/used SteamAPI functions and makes them friendly
 // To Love2D and LuaJIT 5.1. This is self contained and only needs the stdlib
 // and Steamworks to work!
 //
@@ -43,7 +43,7 @@ SL_API const char *steam_get_persona() {
 
 SL_API bool steam_get_achievement(const char *name) {
     bool achieved = false;
-    
+
     if (SteamUserStats())
         SteamUserStats()->GetAchievement(name, &achieved);
 
