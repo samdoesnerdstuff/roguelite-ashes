@@ -128,12 +128,12 @@ function player:advance_day()
             -- and that's pretty bad D:
             self.gone_insane = true
             if self.gone_insane then
-                -- massive loss to stamina
+                -- massive loss to stamina when gone insane
                 self.stamina_loss_rate = 0.03
                 self.stamina_regen_rate = 0.0045
             else
                 self.stamina_loss_rate = 0.01
-                self.stamina_regen_rate 0.009
+                self.stamina_regen_rate = 0.009
             end
             if self.sanity < 0.000 then
                 self.sanity = 0.000
@@ -167,6 +167,9 @@ function player:advance_day()
             self.rad_gain_rate = 0.099
             self.sanity = self.sanity - 0.250
             print("The acute radiation is driving you mad...")
+        else
+            self.radiation = 1.0
+            print("Your body has given out due to extreme radiation.")
         end
     end
 

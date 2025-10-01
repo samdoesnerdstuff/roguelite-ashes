@@ -6,7 +6,7 @@
 ![Static Badge](https://img.shields.io/badge/Game_Assets-CC--BY--ND--NC--4.0-white?logo=creativecommons&logoColor=%23FFFFFF)
 
 Built in Lua, this is a "source-available" repository for an in-development game that will be published to Steam sometime in March of 2026. This game is licensed under the following licenses;
- - For **Source Code** (all content written in Lua, C or Make): the license is [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ - For **Source Code** (all content written in Lua, C++ or Make): the license is [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
  - For **Game Assets** (Music, sprites, other art): the license is [CC-BY-ND-NC 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 I am committed to transparent development, which is why the source code is freely available to the community for learning and non-commercial use. The distinction in licensing ensures that while I can still benefit from contributions and feedback on the code, I can also protect the copyrighted art and music assets to fund ongoing development and make a sustainable commercial product.

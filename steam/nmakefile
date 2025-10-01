@@ -1,0 +1,18 @@
+# NMakefile for Lua C API DLL with Steamworks
+# ! Do not edit
+
+CC = cl
+CFLAGS = /MD /EHsc /W3 /GA /O2 /LD /std:c++20
+INCLUDES = /I"steamworks\public"
+LIBS = /link  /LIBPATH:"steamworks\redistributable_bin\win64" steam_api64.lib
+TARGET = luasteam.dll
+
+SRCS = luasteam.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $(INCLUDES) $(SRCS) $(LIBS) /OUT:$(TARGET)
+
+clean:
+	if exist $(TARGET) del $(TARGET)
