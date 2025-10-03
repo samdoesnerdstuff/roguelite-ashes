@@ -21,3 +21,25 @@ Now that the boring but mandatory legal preface is out of the way... welcome to 
 This game is built on top of Love2D and MSYS2 (MSYS is a GNU-like environment for Windows and I used it to build the Lua->Steam APIs). [Love2D](https://love2d.org/) is an *awesome* framework for building 2D games in Lua. I chose it since it provides a perfect blend of development speed and runtime speed. Lua is also a fairly easy to grasp language, many resources are available to understand and master Lua in a few weeks.
 
 It should be noted that this game does *not* have the best coding practices implemented at all times. Sometimes there are cases of *magical numbers* in a function draft unless its an intentional constant value. While this is *inherently* not great, it does allow for a small uptick in developer speed overall, but most of this issues will be ironed out in later commits to improve the entire codebase. I'm always hard at work when it comes to improving the codebase and the project in general, if you spot instances of bad code or poorly-performant code, make a note with an issue, please!
+
+## How to build
+
+> [!TIP]
+> Visual Studio 2022 with C++ Desktop Development packages as well as the Windows Development Kit (WDK) is advised for the C++ portions of this project, if you're on Windows 10 and 11. Versions of Windows below 10 are explicitly not supported.
+
+> [!NOTE]
+> For non-Windows users, all the tools should be pre-installed, if not they (`cmake`, a C++ compiler of your choice, headers) can all be installed from your package manager. (`brew`, `apt`, `pacman`, etc.)
+To build the full project, you will need to open the *x64 Developer Command Prompt* that comes installed with Visual Studio and the aforementioned packages and navigate to the repos root directory, from there, `cd` into the `steam` directory. From here you can easily run the cmake configuration process!
+
+```
+C:\roguelite-ashes\steam > cmake -S . -B build -G [generator]
+```
+
+On non-Windows, you can open your terminal of choice in the repository root. From there you can `cd` into steam and configure with CMake!
+
+<!-- ZSH chosen since it's what I use on macos -->
+```
+user@hostname steam % cmake -S . -B build -G [generator]
+```
+
+CMake is an excellent universal build tool. This is used here for its ease of use, allowing this project to be built across Windows, MacOS, and Linux targets.
